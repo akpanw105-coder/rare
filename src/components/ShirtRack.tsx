@@ -437,13 +437,19 @@ export function ShirtRack() {
     const card = cards[idx];
     if (!card) return;
 
-    // Calculate exact scrollLeft needed to center the card within the track's visible container
-    const cardLeft = card.offsetLeft;
-    const cardWidth = card.offsetWidth;
-    const trackWidth = trackRef.current.clientWidth;
-    const targetScrollLeft = cardLeft - (trackWidth / 2 - cardWidth / 2);
+    // Use getBoundingClientRect relative to the viewport so the card center aligns with the viewport center
+    const cardRect = card.getBoundingClientRect();
+    const currentScrollLeft = trackRef.current.scrollLeft;
 
-    trackRef.current.scrollTo({ left: Math.max(0, targetScrollLeft), behavior: "smooth" });
+    // Target: place the center of the card exactly at the center of the viewport (window.innerWidth / 2)
+    const cardCenter = cardRect.left + cardRect.width / 2;
+    const viewportCenter = window.innerWidth / 2;
+    const delta = cardCenter - viewportCenter;
+
+    trackRef.current.scrollTo({
+      left: Math.max(0, currentScrollLeft + delta),
+      behavior: "smooth",
+    });
   }, []);
 
   const prev = useCallback(() => {
@@ -486,16 +492,23 @@ export function ShirtRack() {
   };
 
   useEffect(() => {
-    // Timeout allows DOM layout and CSS transition (e.g., card width change) to settle before centering
-    const timer = setTimeout(() => {
+    // Run centering immediately and after CSS width transition settles
+    scrollToActive(activeIndex);
+
+    const timer1 = setTimeout(() => {
       scrollToActive(activeIndex);
-    }, 50);
+    }, 150);
+
+    const timer2 = setTimeout(() => {
+      scrollToActive(activeIndex);
+    }, 550);
 
     const handleResize = () => scrollToActive(activeIndex);
     window.addEventListener("resize", handleResize);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       window.removeEventListener("resize", handleResize);
     };
   }, [activeIndex, scrollToActive]);
@@ -588,7 +601,7 @@ export function ShirtRack() {
             ref={trackRef}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
-            className="flex gap-4 sm:gap-10 overflow-x-auto pt-3 pb-8 px-[calc(50vw-130px)] sm:px-12 hide-scrollbar relative z-20 items-end"
+            className="flex gap-4 sm:gap-10 overflow-x-auto pt-3 pb-8 px-[50vw] sm:px-12 hide-scrollbar relative z-20 items-end"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {VINTAGE_SHIRTS.map((shirt, i) => (
