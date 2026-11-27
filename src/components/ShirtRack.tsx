@@ -128,7 +128,7 @@ function ShirtCard({
         isActive ? "z-20" : "z-10 hover:z-15"
       }`}
       style={{
-        width: isActive ? "clamp(260px, 78vw, 360px)" : "clamp(180px, 48vw, 240px)",
+        width: isActive ? "clamp(260px, 72vw, 360px)" : "clamp(180px, 48vw, 240px)",
       }}
       aria-label={`View fabric sample: ${shirt.name}`}
     >
@@ -436,29 +436,68 @@ export function ShirtRack() {
     const cards = Array.from(trackRef.current.children) as HTMLElement[];
     const card = cards[idx];
     if (!card) return;
-    const trackRect = trackRef.current.getBoundingClientRect();
-    const cardRect = card.getBoundingClientRect();
-    const offset =
-      card.offsetLeft -
-      trackRef.current.scrollLeft -
-      (trackRect.width / 2 - cardRect.width / 2);
-    trackRef.current.scrollBy({ left: offset, behavior: "smooth" });
+
+    // Calculate exact scrollLeft needed to center the card within the track's visible container
+    const cardLeft = card.offsetLeft;
+    const cardWidth = card.offsetWidth;
+    const trackWidth = trackRef.current.clientWidth;
+    const targetScrollLeft = cardLeft - (trackWidth / 2 - cardWidth / 2);
+
+    trackRef.current.scrollTo({ left: Math.max(0, targetScrollLeft), behavior: "smooth" });
   }, []);
 
   const prev = useCallback(() => {
     const n = Math.max(0, activeIndex - 1);
     setActiveIndex(n);
-    scrollToActive(n);
-  }, [activeIndex, scrollToActive]);
+  }, [activeIndex]);
 
   const next = useCallback(() => {
     const n = Math.min(VINTAGE_SHIRTS.length - 1, activeIndex + 1);
     setActiveIndex(n);
-    scrollToActive(n);
-  }, [activeIndex, scrollToActive]);
+  }, [activeIndex]);
+
+  // Touch swipe handling for mobile
+  const touchStartXRef = useRef<number>(0);
+  const touchStartYRef = useRef<number>(0);
+  const isSwipingRef = useRef<boolean>(false);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+    touchStartYRef.current = e.touches[0].clientY;
+    isSwipingRef.current = true;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!isSwipingRef.current) return;
+    isSwipingRef.current = false;
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchStartXRef.current - touchEndX;
+    const deltaY = touchStartYRef.current - touchEndY;
+
+    // Only swipe if horizontal motion exceeds vertical and exceeds threshold
+    if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+        next();
+      } else {
+        prev();
+      }
+    }
+  };
 
   useEffect(() => {
-    scrollToActive(activeIndex);
+    // Timeout allows DOM layout and CSS transition (e.g., card width change) to settle before centering
+    const timer = setTimeout(() => {
+      scrollToActive(activeIndex);
+    }, 50);
+
+    const handleResize = () => scrollToActive(activeIndex);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [activeIndex, scrollToActive]);
 
   const activeShirt = VINTAGE_SHIRTS[activeIndex];
@@ -547,7 +586,9 @@ export function ShirtRack() {
           {/* Scrollable shirt track with 6 distinct fabric shirts */}
           <div
             ref={trackRef}
-            className="flex gap-6 sm:gap-10 overflow-x-auto pt-3 pb-8 px-4 sm:px-12 hide-scrollbar relative z-20 items-end"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="flex gap-4 sm:gap-10 overflow-x-auto pt-3 pb-8 px-[calc(50vw-130px)] sm:px-12 hide-scrollbar relative z-20 items-end"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {VINTAGE_SHIRTS.map((shirt, i) => (

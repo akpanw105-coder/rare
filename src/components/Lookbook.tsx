@@ -88,7 +88,8 @@ export function Lookbook() {
   // Horizontal scroll buttons
   const scroll = (direction: "left" | "right") => {
     if (!sliderRef.current) return;
-    const cardWidth = 380;
+    const card = sliderRef.current.querySelector<HTMLElement>(".lookbook-card");
+    const cardWidth = card ? card.offsetWidth + 24 : 320;
     const distance = direction === "left" ? -cardWidth : cardWidth;
     sliderRef.current.scrollBy({ left: distance, behavior: "smooth" });
   };
@@ -170,7 +171,7 @@ export function Lookbook() {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUpOrLeave}
           onMouseLeave={handleMouseUpOrLeave}
-          className={`flex gap-6 sm:gap-8 overflow-x-auto px-5 sm:px-8 lg:px-12 pb-8 pt-2 hide-scrollbar select-none ${
+          className={`flex gap-6 sm:gap-8 overflow-x-auto px-[calc(50vw-140px)] sm:px-8 lg:px-12 pb-8 pt-2 hide-scrollbar select-none ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           style={{
@@ -181,9 +182,9 @@ export function Lookbook() {
           {EDITORIAL_LOOKS.map((item, index) => (
             <div
               key={item.id}
-              className="group relative flex-none w-[290px] sm:w-[350px] lg:w-[380px] flex flex-col justify-between overflow-hidden border border-[#27272a] hover:border-[#e06820]/70 transition-all duration-500 rounded-sm bg-[#101012] shadow-xl hover:shadow-2xl hover:shadow-black/60"
+              className="lookbook-card group relative flex-none w-[280px] sm:w-[350px] lg:w-[380px] flex flex-col justify-between overflow-hidden border border-[#27272a] hover:border-[#e06820]/70 transition-all duration-500 rounded-sm bg-[#101012] shadow-xl hover:shadow-2xl hover:shadow-black/60"
               style={{
-                scrollSnapAlign: "start",
+                scrollSnapAlign: "center",
               }}
             >
               {/* Image Container with existing smooth hover zoom animation preserved */}
