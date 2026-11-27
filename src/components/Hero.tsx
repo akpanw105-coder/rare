@@ -172,16 +172,19 @@ export function Hero() {
           alt="RARE vintage short-sleeve button-up camp-collar shirt"
           fill
           priority
-          className="object-cover object-[center_18%] xs:object-[center_20%] sm:object-[center_22%] md:object-[62%_20%] lg:object-[68%_18%] filter brightness-[0.88] contrast-[1.04]"
+          className="object-cover object-[center_16%] xs:object-[center_18%] sm:object-[center_20%] md:object-[62%_20%] lg:object-[68%_18%] filter brightness-[0.96] sm:brightness-[0.92] contrast-[1.03]"
           sizes="100vw"
         />
 
         {/* Cinematic editorial tone gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/55 sm:via-[#09090b]/40 to-transparent opacity-95 sm:opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/80 sm:via-[#09090b]/75 to-transparent w-full md:w-3/5 lg:w-1/2 opacity-95" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#09090b]/70 sm:from-[#09090b]/60 via-transparent to-transparent h-28 sm:h-32" />
-        {/* Subtle warm amber/burgundy studio glow in shadows */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#3a1518]/30 via-transparent to-transparent pointer-events-none" />
+        {/* Vertical bottom gradient to anchor copy softly without blanketing the shirt & model */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 sm:via-[#09090b]/45 to-transparent opacity-95 sm:opacity-90" />
+        {/* Horizontal left vignette: on mobile, softened and balanced across the frame so the left isn't excessively dark */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#09090b]/60 via-[#09090b]/35 to-transparent md:from-[#09090b] md:via-[#09090b]/80 md:w-3/5 lg:w-1/2 opacity-90 sm:opacity-95" />
+        {/* Top subtle vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#09090b]/55 sm:from-[#09090b]/60 via-transparent to-transparent h-24 sm:h-32" />
+        {/* Subtle warm studio glow in shadows */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#3a1518]/25 via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* ── FILM GRAIN TEXTURE ─────────────────────────────────── */}
@@ -230,7 +233,7 @@ export function Hero() {
               </span>
             </span>
             <span className="hero-line block overflow-hidden py-0.5">
-              <span className="hero-word inline-block text-[#f97316]">
+              <span className="hero-word inline-block text-[#e06820]">
                 IN.
               </span>
             </span>
@@ -252,7 +255,7 @@ export function Hero() {
             {/* Primary Action */}
             <Link
               href="#shirt-rack"
-              className="group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-9 py-3.5 sm:py-4 bg-[#f97316] text-black font-mono font-bold text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] hover:bg-[#ea580c] active:scale-[0.98] transition-all rounded-sm shadow-xl shadow-orange-500/20 cursor-pointer text-center"
+              className="group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-9 py-3.5 sm:py-4 bg-[#e06820] text-black font-mono font-bold text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] hover:bg-[#c95716] active:scale-[0.98] transition-all rounded-sm shadow-xl shadow-orange-950/30 cursor-pointer text-center"
             >
               <span>EXPLORE THE COLLECTION</span>
               <ArrowDownRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform shrink-0" />

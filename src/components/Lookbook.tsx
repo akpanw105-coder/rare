@@ -122,8 +122,8 @@ export function Lookbook() {
         {/* Section Heading & Interactive Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6 border-b border-zinc-800/60 pb-8">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#f97316] tracking-[0.2em] mb-3">
-              <span className="w-6 h-0.5 bg-[#f97316]" />
+            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#e06820] tracking-[0.2em] mb-3">
+              <span className="w-6 h-0.5 bg-[#e06820]" />
               <span>Editorial Archives & Needlework</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-[-0.03em] text-[#f4efe6]">
@@ -143,7 +143,7 @@ export function Lookbook() {
                 type="button"
                 onClick={() => scroll("left")}
                 disabled={!canScrollLeft}
-                className="w-10 h-10 flex items-center justify-center border border-zinc-700/80 text-zinc-300 hover:border-[#f97316] hover:text-[#f97316] disabled:opacity-20 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer select-none"
+                className="w-10 h-10 flex items-center justify-center border border-zinc-700/80 text-zinc-300 hover:border-[#e06820] hover:text-[#e06820] disabled:opacity-20 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer select-none"
                 aria-label="Scroll left in lookbook"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -152,7 +152,7 @@ export function Lookbook() {
                 type="button"
                 onClick={() => scroll("right")}
                 disabled={!canScrollRight}
-                className="w-10 h-10 flex items-center justify-center border border-zinc-700/80 text-zinc-300 hover:border-[#f97316] hover:text-[#f97316] disabled:opacity-20 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer select-none"
+                className="w-10 h-10 flex items-center justify-center border border-zinc-700/80 text-zinc-300 hover:border-[#e06820] hover:text-[#e06820] disabled:opacity-20 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer select-none"
                 aria-label="Scroll right in lookbook"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -181,7 +181,7 @@ export function Lookbook() {
           {EDITORIAL_LOOKS.map((item, index) => (
             <div
               key={item.id}
-              className="group relative flex-none w-[290px] sm:w-[350px] lg:w-[380px] flex flex-col justify-between overflow-hidden border border-[#27272a] hover:border-[#f97316]/70 transition-all duration-500 rounded-sm bg-[#101012] shadow-xl hover:shadow-2xl hover:shadow-black/60"
+              className="group relative flex-none w-[290px] sm:w-[350px] lg:w-[380px] flex flex-col justify-between overflow-hidden border border-[#27272a] hover:border-[#e06820]/70 transition-all duration-500 rounded-sm bg-[#101012] shadow-xl hover:shadow-2xl hover:shadow-black/60"
               style={{
                 scrollSnapAlign: "start",
               }}
@@ -202,7 +202,7 @@ export function Lookbook() {
 
                 {/* Category Badge Top Left */}
                 <div className="absolute top-4 left-4 z-10 pointer-events-none">
-                  <span className="px-2.5 py-1 text-[9px] font-mono font-bold tracking-[0.18em] uppercase bg-black/90 text-[#f97316] border border-[#f97316]/40 backdrop-blur-md rounded-[2px] shadow-md">
+                  <span className="px-2.5 py-1 text-[9px] font-mono font-bold tracking-[0.18em] uppercase bg-black/90 text-[#e06820] border border-[#e06820]/40 backdrop-blur-md rounded-[2px] shadow-md">
                     {item.category}
                   </span>
                 </div>
@@ -216,7 +216,7 @@ export function Lookbook() {
               {/* Editorial Caption Box */}
               <div className="p-6 flex-1 flex flex-col justify-between border-t border-[#27272a] bg-[#101012]">
                 <div>
-                  <h3 className="text-lg font-black uppercase tracking-tight text-[#f4efe6] group-hover:text-[#f97316] transition-colors leading-snug">
+                  <h3 className="text-lg font-black uppercase tracking-tight text-[#f4efe6] group-hover:text-[#e06820] transition-colors leading-snug">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm text-zinc-400 font-sans leading-relaxed line-clamp-2">
@@ -228,7 +228,7 @@ export function Lookbook() {
                   <span className="font-medium text-zinc-400">RARE · LAGOS</span>
                   <Link
                     href="#shirts"
-                    className="text-zinc-300 group-hover:text-[#f97316] transition-colors flex items-center gap-1.5 font-bold"
+                    className="text-zinc-300 group-hover:text-[#e06820] transition-colors flex items-center gap-1.5 font-bold"
                   >
                     <span>VIEW FABRICS</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -237,7 +237,7 @@ export function Lookbook() {
               </div>
 
               {/* Hover Bottom Accent Bar (Preserved micro-interaction) */}
-              <div className="h-0.5 bg-[#f97316] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
+              <div className="h-0.5 bg-[#e06820] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
             </div>
           ))}
         </div>
@@ -247,12 +247,12 @@ export function Lookbook() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-12 sm:mt-16">
         <div className="pt-8 border-t border-[#27272a] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-3 text-xs font-mono text-zinc-400 uppercase tracking-wider max-w-xl leading-relaxed">
-            <Sparkles className="w-4 h-4 text-[#f97316] shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#e06820] shrink-0" />
             <span>Different vintage fabrics sourced across Lagos — tailored exclusively in RARE’s signature camp-collar cut.</span>
           </div>
           <Link
             href="#shirt-rack"
-            className="group inline-flex items-center gap-2.5 px-6 py-3.5 border border-zinc-700/80 text-zinc-300 font-mono text-xs uppercase tracking-[0.18em] hover:border-[#f97316] hover:text-[#f97316] hover:bg-zinc-900/60 transition-all rounded-sm cursor-pointer shadow-sm"
+            className="group inline-flex items-center gap-2.5 px-6 py-3.5 border border-zinc-700/80 text-zinc-300 font-mono text-xs uppercase tracking-[0.18em] hover:border-[#e06820] hover:text-[#e06820] hover:bg-zinc-900/60 transition-all rounded-sm cursor-pointer shadow-sm"
           >
             <span>Inspect the Shirt Rack</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

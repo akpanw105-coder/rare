@@ -24,7 +24,7 @@ const RACK_META: Record<string, { accent: string; label: string; year: string }>
   "rare-shirt-002": { accent: "#e0a96d", label: "70s GEOMETRIC", year: "EDITION 02" },
   "rare-shirt-003": { accent: "#f4f4f5", label: "MONOCHROME WAVE", year: "EDITION 03" },
   "rare-shirt-004": { accent: "#fef08a", label: "SUNSET STRIPES", year: "EDITION 04" },
-  "rare-shirt-005": { accent: "#f97316", label: "NOIR TANIKA", year: "EDITION 05" },
+  "rare-shirt-005": { accent: "#e06820", label: "NOIR TANIKA", year: "EDITION 05" },
   "rare-shirt-006": { accent: "#fde68a", label: "MOSAIC EARTH", year: "EDITION 06" },
 };
 
@@ -118,7 +118,7 @@ function ShirtCard({
   isActive: boolean;
   onClick: () => void;
 }) {
-  const meta = RACK_META[shirt.id] ?? { accent: "#f97316", label: shirt.series, year: "01" };
+  const meta = RACK_META[shirt.id] ?? { accent: "#e06820", label: shirt.series, year: "01" };
 
   return (
     <button
@@ -198,7 +198,7 @@ function ShirtCard({
         {isActive && (
           <div className="absolute top-3 right-3 z-10">
             <span className="flex items-center gap-1 px-2 py-0.5 text-[9px] font-mono font-semibold tracking-wider uppercase bg-black/90 text-zinc-300 border border-zinc-700 rounded-[2px] backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#f97316] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#e06820] animate-pulse" />
               <span>ON RACK</span>
             </span>
           </div>
@@ -271,7 +271,7 @@ function ProductDrawer({
   onFlip: () => void;
   isFlipped: boolean;
 }) {
-  const meta = RACK_META[shirt.id] ?? { accent: "#f97316", label: shirt.series, year: "01" };
+  const meta = RACK_META[shirt.id] ?? { accent: "#e06820", label: shirt.series, year: "01" };
   const currentImage = isFlipped && shirt.backImage ? shirt.backImage : shirt.image;
 
   return (
@@ -310,7 +310,7 @@ function ProductDrawer({
             type="button"
             onClick={onFlip}
             title="Inspect front/back of garment"
-            className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 bg-black/90 border border-zinc-700 text-zinc-200 hover:text-[#f97316] hover:border-[#f97316] text-[10px] font-mono uppercase tracking-[0.16em] rounded-sm transition-colors cursor-pointer shadow-lg"
+            className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 bg-black/90 border border-zinc-700 text-zinc-200 hover:text-[#e06820] hover:border-[#e06820] text-[10px] font-mono uppercase tracking-[0.16em] rounded-sm transition-colors cursor-pointer shadow-lg"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isFlipped ? "VIEW DETAIL" : "VIEW GARMENT"}</span>
@@ -353,7 +353,7 @@ function ProductDrawer({
             </span>
           </div>
 
-          <div className="space-y-2 border-l-2 border-[#f97316] pl-3.5 bg-zinc-900/40 p-3 rounded-sm">
+          <div className="space-y-2 border-l-2 border-[#e06820] pl-3.5 bg-zinc-900/40 p-3 rounded-sm">
             <p className="text-xs text-zinc-200 leading-relaxed font-sans">{shirt.description}</p>
             <p className="text-[11px] font-mono text-zinc-400 mt-1">{shirt.fabricDescription}</p>
           </div>
@@ -367,7 +367,7 @@ function ProductDrawer({
               {shirt.sizes.map((sz) => (
                 <span
                   key={sz}
-                  className="px-3 py-1.5 text-xs font-mono font-semibold border bg-zinc-900 text-white rounded-sm border-zinc-700/80 hover:border-[#f97316] transition-colors"
+                  className="px-3 py-1.5 text-xs font-mono font-semibold border bg-zinc-900 text-white rounded-sm border-zinc-700/80 hover:border-[#e06820] transition-colors"
                 >
                   {sz}
                 </span>
@@ -462,7 +462,7 @@ export function ShirtRack() {
   }, [activeIndex, scrollToActive]);
 
   const activeShirt = VINTAGE_SHIRTS[activeIndex];
-  const activeMeta = RACK_META[activeShirt.id] ?? { accent: "#f97316", label: "", year: "01" };
+  const activeMeta = RACK_META[activeShirt.id] ?? { accent: "#e06820", label: "", year: "01" };
 
   return (
     <section
@@ -497,8 +497,8 @@ export function ShirtRack() {
         {/* Section Heading & Perspective Narrative */}
         <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-800/60 pb-8">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#f97316] tracking-[0.2em] mb-4">
-              <span className="w-6 h-0.5 bg-[#f97316]" />
+            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#e06820] tracking-[0.2em] mb-4">
+              <span className="w-6 h-0.5 bg-[#e06820]" />
               <span>Interactive Tailoring Rack</span>
             </div>
             <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-[-0.04em] text-white leading-[0.95]">
@@ -579,7 +579,7 @@ export function ShirtRack() {
               type="button"
               onClick={prev}
               disabled={activeIndex === 0}
-              className="w-10 h-10 flex items-center justify-center border border-zinc-700 text-zinc-300 hover:border-[#f97316] hover:text-[#f97316] disabled:opacity-25 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center border border-zinc-700 text-zinc-300 hover:border-[#e06820] hover:text-[#e06820] disabled:opacity-25 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer"
               aria-label="Previous shirt"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -591,7 +591,7 @@ export function ShirtRack() {
               type="button"
               onClick={next}
               disabled={activeIndex === VINTAGE_SHIRTS.length - 1}
-              className="w-10 h-10 flex items-center justify-center border border-zinc-700 text-zinc-300 hover:border-[#f97316] hover:text-[#f97316] disabled:opacity-25 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center border border-zinc-700 text-zinc-300 hover:border-[#e06820] hover:text-[#e06820] disabled:opacity-25 disabled:cursor-not-allowed transition-colors rounded-sm cursor-pointer"
               aria-label="Next shirt"
             >
               <ArrowRight className="w-4 h-4" />

@@ -5,21 +5,21 @@
   <!--
     "R" lettermark for RARE — vintage-inspired, geometric, premium.
     Drawn with clean paths: straight vertical stem + curved bowl + angled leg.
-    Colour: brand accent orange #f97316 on near-black #09090b.
+    Colour: brand accent refined orange #e06820 on near-black #09090b.
   -->
 
   <!-- Vertical stem -->
-  <rect x="8" y="7" width="3.5" height="18" rx="0.5" fill="#f97316"/>
+  <rect x="8" y="7" width="3.5" height="18" rx="0.5" fill="#e06820"/>
 
   <!-- Bowl top bar -->
-  <rect x="8" y="7" width="11" height="3" rx="0.5" fill="#f97316"/>
+  <rect x="8" y="7" width="11" height="3" rx="0.5" fill="#e06820"/>
 
   <!-- Bowl middle bar -->
-  <rect x="8" y="15" width="10" height="3" rx="0.5" fill="#f97316"/>
+  <rect x="8" y="15" width="10" height="3" rx="0.5" fill="#e06820"/>
 
   <!-- Bowl right curve (rounded cap on right of bowl) -->
-  <path d="M 19 7 Q 24 7 24 11.5 Q 24 16 19 18 L 19 15 Q 20.5 15 20.5 11.5 Q 20.5 10 19 10 Z" fill="#f97316"/>
+  <path d="M 19 7 Q 24 7 24 11.5 Q 24 16 19 18 L 19 15 Q 20.5 15 20.5 11.5 Q 20.5 10 19 10 Z" fill="#e06820"/>
 
   <!-- Leg: diagonal from mid-right down to bottom-right -->
-  <path d="M 18.5 18 L 24 25 L 20.5 25 L 15 18 Z" fill="#f97316"/>
+  <path d="M 18.5 18 L 24 25 L 20.5 25 L 15 18 Z" fill="#e06820"/>
 </svg>

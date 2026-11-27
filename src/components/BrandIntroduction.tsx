@@ -52,14 +52,14 @@ export function BrandIntroduction() {
           {/* Left Text Column */}
           <div className="brand-text-col lg:col-span-7 space-y-6 sm:space-y-8">
             <div className="brand-heading space-y-3">
-              <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-mono uppercase text-[#f97316] tracking-widest">
-                <span className="w-6 h-0.5 bg-[#f97316]" />
+              <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-mono uppercase text-[#e06820] tracking-widest">
+                <span className="w-6 h-0.5 bg-[#e06820]" />
                 <span>Vintage Shirt Manifesto</span>
               </div>
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-tight">
                 Vintage Roots.<br />
                 Lagos Needlework.<br />
-                <span className="text-[#f97316]">Zero Conformity.</span>
+                <span className="text-[#e06820]">Zero Conformity.</span>
               </h2>
             </div>
 
@@ -97,9 +97,9 @@ export function BrandIntroduction() {
               ].map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="brand-pillar p-3.5 sm:p-4 border border-[#27272a] bg-[#121214] rounded-sm hover:border-[#f97316]/50 transition-colors duration-300"
+                  className="brand-pillar p-3.5 sm:p-4 border border-[#27272a] bg-[#121214] rounded-sm hover:border-[#e06820]/50 transition-colors duration-300"
                 >
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#f97316] mb-2" />
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#e06820] mb-2" />
                   <h4 className="text-[11px] sm:text-xs font-mono font-bold uppercase text-white tracking-wider">
                     {title}
                   </h4>
@@ -131,15 +131,15 @@ export function BrandIntroduction() {
                   <blockquote className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white leading-tight">
                     &ldquo;Not Made<br />To Blend In.&rdquo;
                   </blockquote>
-                  <div className="mt-3 text-[10px] font-mono text-[#f97316] uppercase tracking-widest font-semibold">
+                  <div className="mt-3 text-[10px] font-mono text-[#e06820] uppercase tracking-widest font-semibold">
                     Lagos · Nigeria
                   </div>
                 </div>
               </div>
 
               {/* Orange corner accents */}
-              <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-[#f97316]" />
-              <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-[#f97316]" />
+              <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-[#e06820]" />
+              <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-[#e06820]" />
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#09090b] text-[#f4f4f5] selection:bg-[#f97316] selection:text-black font-sans">
+      <body className="min-h-full flex flex-col bg-[#09090b] text-[#f4f4f5] selection:bg-[#e06820] selection:text-black font-sans">
         <CustomCursor />
         <Navigation />
         <main className="flex-1">{children}</main>

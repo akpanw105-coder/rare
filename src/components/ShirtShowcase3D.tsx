@@ -70,7 +70,7 @@ export function ShirtShowcase3D() {
     mainSpot.penumbra = 0.6;
     scene.add(mainSpot);
 
-    const rimLight = new THREE.DirectionalLight(0xf97316, 2.5);
+    const rimLight = new THREE.DirectionalLight(0xe06820, 2.5);
     rimLight.position.set(-6, -4, -3);
     scene.add(rimLight);
 
@@ -431,13 +431,13 @@ export function ShirtShowcase3D() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-[#27272a] text-[#f97316] text-[11px] font-mono tracking-widest uppercase rounded-sm mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-[#27272a] text-[#e06820] text-[11px] font-mono tracking-widest uppercase rounded-sm mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>SPATIAL 3D ARCHIVE</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-tight">
               INTERACTIVE <br />
-              <span className="text-[#f97316]">VINTAGE SHIRT</span> GALLERY
+              <span className="text-[#e06820]">VINTAGE SHIRT</span> GALLERY
             </h2>
           </div>
 
@@ -453,7 +453,7 @@ export function ShirtShowcase3D() {
                 onClick={() => setIsRotating(!isRotating)}
                 className="px-3 py-1.5 border border-[#27272a] hover:border-zinc-500 bg-[#121214] text-zinc-300 rounded-sm flex items-center gap-1.5 transition-colors"
               >
-                <RotateCcw className={`w-3.5 h-3.5 ${isRotating ? "text-[#f97316]" : "text-zinc-500"}`} />
+                <RotateCcw className={`w-3.5 h-3.5 ${isRotating ? "text-[#e06820]" : "text-zinc-500"}`} />
                 <span>{isRotating ? "MOTION ON" : "MOTION PAUSED"}</span>
               </button>
 
@@ -461,7 +461,7 @@ export function ShirtShowcase3D() {
                 <button
                   type="button"
                   onClick={() => setSelectedShirt(null)}
-                  className="px-3 py-1.5 border border-[#f97316]/50 bg-black text-[#f97316] hover:bg-[#f97316] hover:text-black rounded-sm flex items-center gap-1 transition-colors"
+                  className="px-3 py-1.5 border border-[#e06820]/50 bg-black text-[#e06820] hover:bg-[#e06820] hover:text-black rounded-sm flex items-center gap-1 transition-colors"
                 >
                   <X className="w-3.5 h-3.5" />
                   <span>RESET VIEW</span>
@@ -483,7 +483,7 @@ export function ShirtShowcase3D() {
         {/* Hovered Shirt HUD Card */}
         {hoveredShirt && !selectedShirt && (
           <div className="pointer-events-none absolute bottom-6 left-6 z-20 bg-[#121214]/90 border border-zinc-700/80 p-4 rounded-sm backdrop-blur-md max-w-xs animate-in fade-in duration-200">
-            <span className="text-[10px] font-mono text-[#f97316] uppercase tracking-widest block">
+            <span className="text-[10px] font-mono text-[#e06820] uppercase tracking-widest block">
               CLICK TO FOCUS
             </span>
             <h4 className="text-sm font-bold uppercase text-white tracking-tight mt-0.5">
@@ -498,10 +498,10 @@ export function ShirtShowcase3D() {
 
         {/* Selected Shirt Inspector Drawer Overlay */}
         {selectedShirt && (
-          <div className="absolute top-6 right-6 z-30 w-full max-w-sm sm:max-w-md bg-[#121214]/95 border border-[#f97316]/50 p-6 rounded-sm shadow-2xl backdrop-blur-xl animate-in slide-in-from-right-4 duration-300">
+          <div className="absolute top-6 right-6 z-30 w-full max-w-sm sm:max-w-md bg-[#121214]/95 border border-[#e06820]/50 p-6 rounded-sm shadow-2xl backdrop-blur-xl animate-in slide-in-from-right-4 duration-300">
             <div className="flex items-start justify-between pb-4 border-b border-[#27272a]">
               <div>
-                <span className="px-2 py-0.5 text-[9px] font-mono font-bold uppercase bg-[#f97316] text-black">
+                <span className="px-2 py-0.5 text-[9px] font-mono font-bold uppercase bg-[#e06820] text-black">
                   {selectedShirt.badge || "IN FOCUS"}
                 </span>
                 <span className="ml-2 text-[10px] font-mono text-zinc-400 uppercase tracking-widest">
@@ -523,7 +523,7 @@ export function ShirtShowcase3D() {
                 {selectedShirt.name}
               </h3>
 
-              <div className="text-xl font-bold text-[#f97316]">
+              <div className="text-xl font-bold text-[#e06820]">
                 {formatPrice(selectedShirt.price)}
               </div>
 
@@ -570,7 +570,7 @@ export function ShirtShowcase3D() {
                   href={getWhatsAppLink(selectedShirt)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 bg-[#f97316] hover:bg-[#ea580c] text-black font-mono font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 rounded-sm transition-colors shadow-md"
+                  className="w-full py-3 px-4 bg-[#e06820] hover:bg-[#c95716] text-black font-mono font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 rounded-sm transition-colors shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>ORDER ON WHATSAPP</span>

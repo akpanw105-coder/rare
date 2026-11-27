@@ -11,8 +11,8 @@ export function Collections() {
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#f97316] tracking-widest mb-2">
-              <Shirt className="w-3.5 h-3.5 text-[#f97316]" />
+            <div className="flex items-center gap-2 text-xs font-mono uppercase text-[#e06820] tracking-widest mb-2">
+              <Shirt className="w-3.5 h-3.5 text-[#e06820]" />
               <span>VINTAGE PRINT DIRECTORY</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
@@ -30,7 +30,7 @@ export function Collections() {
             <Link
               key={col.id}
               href="#shirts"
-              className="group relative block overflow-hidden border border-[#27272a] bg-[#121214] transition-all hover:border-[#f97316]"
+              className="group relative block overflow-hidden border border-[#27272a] bg-[#121214] transition-all hover:border-[#e06820]"
             >
               {/* Image Container */}
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-zinc-950">
@@ -45,12 +45,12 @@ export function Collections() {
 
                 {/* Badge Tag */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="px-2.5 py-1 text-[10px] font-mono font-bold tracking-widest uppercase bg-black/80 text-[#f97316] border border-[#f97316]/40 backdrop-blur-sm">
+                  <span className="px-2.5 py-1 text-[10px] font-mono font-bold tracking-widest uppercase bg-black/80 text-[#e06820] border border-[#e06820]/40 backdrop-blur-sm">
                     {col.tag}
                   </span>
                 </div>
 
-                <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-[#f97316] group-hover:text-black group-hover:border-[#f97316] transition-colors">
+                <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-[#e06820] group-hover:text-black group-hover:border-[#e06820] transition-colors">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
 
@@ -59,7 +59,7 @@ export function Collections() {
                   <span className="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block mb-1">
                     {col.subtitle}
                   </span>
-                  <h3 className="text-2xl font-black uppercase tracking-tight text-white group-hover:text-[#f97316] transition-colors">
+                  <h3 className="text-2xl font-black uppercase tracking-tight text-white group-hover:text-[#e06820] transition-colors">
                     {col.title}
                   </h3>
                   <p className="mt-2 text-xs text-zinc-300 font-sans line-clamp-2 leading-relaxed">

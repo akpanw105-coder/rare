@@ -9,7 +9,7 @@ export function Footer() {
       <div className="border-b border-zinc-800/80 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#0c0c0e]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <span className="text-[10px] text-[#f97316] uppercase tracking-[0.2em] font-bold block mb-1">
+            <span className="text-[10px] text-[#e06820] uppercase tracking-[0.2em] font-bold block mb-1">
               DIRECT SHIRT CONCIERGE
             </span>
             <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-white leading-tight">
@@ -21,7 +21,7 @@ export function Footer() {
             href="https://wa.me/2348000000000?text=Hello%20RARE%2C%20I%20want%20to%20enquire%20about%20a%20vintage%20shirt"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#f97316] text-black font-bold uppercase tracking-[0.16em] hover:bg-[#ea580c] active:scale-[0.98] transition-all rounded-sm shadow-md shrink-0 cursor-pointer w-full sm:w-auto text-center"
+            className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#e06820] text-black font-bold uppercase tracking-[0.16em] hover:bg-[#c95716] active:scale-[0.98] transition-all rounded-sm shadow-md shrink-0 cursor-pointer w-full sm:w-auto text-center"
           >
             <MessageCircle className="w-4 h-4 fill-black text-black shrink-0" />
             <span>ORDER ON WHATSAPP</span>
@@ -35,7 +35,7 @@ export function Footer() {
         {/* Brand Column */}
         <div className="space-y-4">
           <Link href="/" className="inline-flex items-center gap-2">
-            <span className="text-3xl font-black tracking-[-0.05em] text-white hover:text-[#f97316] transition-colors">
+            <span className="text-3xl font-black tracking-[-0.05em] text-white hover:text-[#e06820] transition-colors">
               RARE
             </span>
           </Link>
@@ -43,7 +43,7 @@ export function Footer() {
             NOT MADE TO BLEND IN. Exclusively vintage short-sleeve button-up shirts, locally tailored in Lagos, Nigeria.
           </p>
           <div className="flex items-center gap-2 text-[11px] text-zinc-500 font-mono">
-            <Shirt className="w-3.5 h-3.5 text-[#f97316]" />
+            <Shirt className="w-3.5 h-3.5 text-[#e06820]" />
             <span>VINTAGE SHIRTS ONLY · LAGOS</span>
           </div>
         </div>
@@ -97,7 +97,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#f97316] transition-colors flex items-center gap-2"
+                className="hover:text-[#e06820] transition-colors flex items-center gap-2"
               >
                 <svg
                   className="w-3.5 h-3.5 fill-current shrink-0"
@@ -139,7 +139,7 @@ export function Footer() {
           <div>&copy; {new Date().getFullYear()} RARE VINTAGE SHIRTS. ALL RIGHTS RESERVED.</div>
           <div className="flex items-center gap-6">
             <span>NOT MADE TO BLEND IN</span>
-            <span className="text-[#f97316]">LAGOS, NIGERIA</span>
+            <span className="text-[#e06820]">LAGOS, NIGERIA</span>
           </div>
         </div>
       </div>

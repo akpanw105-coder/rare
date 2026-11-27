@@ -44,7 +44,7 @@ export function WhatsAppCTA() {
           className="w-[800px] h-[800px] rounded-full opacity-[0.09] filter blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, #f97316 0%, transparent 65%)",
+              "radial-gradient(circle, #e06820 0%, transparent 65%)",
           }}
         />
       </div>
@@ -60,15 +60,15 @@ export function WhatsAppCTA() {
       />
 
       <div className="wacta-content relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-[#f97316] tracking-[0.2em] mb-6 px-3 py-1 bg-[#f97316]/10 border border-[#f97316]/25 rounded-sm backdrop-blur-xs">
-          <Sparkles className="w-3.5 h-3.5 text-[#f97316]" />
+        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-[#e06820] tracking-[0.2em] mb-6 px-3 py-1 bg-[#e06820]/10 border border-[#e06820]/25 rounded-sm backdrop-blur-xs">
+          <Sparkles className="w-3.5 h-3.5 text-[#e06820]" />
           <span>Direct Concierge</span>
         </div>
 
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-[-0.03em] text-white leading-tight mb-6">
           Ready to Own
           <br />
-          <span className="text-[#f97316]">Your Shirt?</span>
+          <span className="text-[#e06820]">Your Shirt?</span>
         </h2>
 
         <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-10 max-w-xl mx-auto font-light">
@@ -80,7 +80,7 @@ export function WhatsAppCTA() {
             href="https://wa.me/2348000000000?text=Hello%20RARE%2C%20I%20want%20to%20order%20a%20vintage%20shirt."
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-3 px-9 py-4 bg-[#f97316] text-black font-mono font-bold text-xs uppercase tracking-[0.18em] hover:bg-[#ea580c] active:scale-[0.98] transition-all rounded-sm shadow-xl shadow-orange-500/20 cursor-pointer"
+            className="group inline-flex items-center justify-center gap-3 px-9 py-4 bg-[#e06820] text-black font-mono font-bold text-xs uppercase tracking-[0.18em] hover:bg-[#c95716] active:scale-[0.98] transition-all rounded-sm shadow-xl shadow-orange-950/25 cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 fill-black text-black" />
             <span>Order on WhatsApp</span>

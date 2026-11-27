@@ -140,7 +140,7 @@ export function CustomCursor() {
           <div
             className={`w-full h-full rounded-full transition-all duration-300 ease-out flex items-center justify-center ${
               isClicking
-                ? "scale-75 border-[#f97316] bg-[#f97316]/10"
+                ? "scale-75 border-[#e06820] bg-[#e06820]/10"
                 : isHovered
                 ? "scale-140 border-[#f4efe6] bg-[#f4efe6]/10 shadow-[0_0_15px_rgba(244,239,230,0.25)]"
                 : isImageHovered
@@ -150,7 +150,7 @@ export function CustomCursor() {
             style={{
               borderWidth: "1px",
               boxShadow: isClicking
-                ? "0 0 16px rgba(249, 115, 22, 0.4)"
+                ? "0 0 16px rgba(224, 104, 32, 0.4)"
                 : undefined,
             }}
           >
@@ -173,9 +173,9 @@ export function CustomCursor() {
           <div
             className={`w-full h-full rounded-full transition-all duration-200 ${
               isClicking
-                ? "bg-[#f97316] scale-150"
+                ? "bg-[#e06820] scale-150"
                 : isHovered
-                ? "bg-[#f97316] scale-125"
+                ? "bg-[#e06820] scale-125"
                 : "bg-[#f4efe6] scale-100 shadow-[0_0_6px_rgba(244,239,230,0.6)]"
             }`}
           />
